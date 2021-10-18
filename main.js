@@ -114,9 +114,99 @@ const addValues = (arr) => {
 const countNumberOfElements = (arr) => {
   // Solution code here...
   function getSum(total, num) {
-      total++;
-    return  total;
+    total++;
+    return total;
   }
 
   return arr.reduce(getSum, 0);
 };
+
+
+// ----------------------Object------------------------------------------
+
+//    1
+
+const checkValues = (obj, value) => {
+    // Solution code here...
+  
+    if (obj.age == value) {
+      return true;
+    } else return false;
+  };
+  
+  //      2
+  
+  const courseInfo = {
+    name: "Code 301",
+    duration: { dayTrack: "4 weeks", eveningTrack: "8 weeks" },
+    topics: [
+      "SMACSS",
+      "APIs",
+      "NodeJS",
+      "SQL",
+      "jQuery",
+      "functional programming",
+    ],
+    finalExam: true,
+  };
+  
+  const getCourseKeys = (obj) => {
+    // Solution code here...
+    return Object.keys(obj);
+  };
+  
+  //   3
+  const a = {
+    GraceHopper: "222-303-5938",
+    AdaLovelace: "222-349-9842",
+    AlanTuring: "222-853-5933",
+  }
+  
+  const updateNumbers = (obj) => {
+    // Solution code here...
+     let x= Object.entries(obj);
+     let y;
+     for (let index = 0; index < x.length; index++) {
+         y += x[index] + ',' ;
+         
+     }
+      return y;
+  };
+  
+  //  4
+  
+  const PassedOrFailed = function (studentGrades) {
+    // TODO: Your code here
+    if (
+      studentGrades.math.grade >= 50 &&
+      studentGrades.english.grade >= 50 &&
+      studentGrades.art.grade >= 50
+    ) {
+      return "The student have passed";
+    } else return "The student have failed";
+  };
+  
+  const studentOne = {
+    math: { grade: 70, total: 120 },
+    english: { grade: 80, total: 100 },
+    art: { grade: 90, total: 100 },
+  };
+  
+  const studentTwo = {
+    math: { grade: 49, total: 120 },
+    english: { grade: 80, total: 100 },
+    art: { grade: 90, total: 100 },
+  };
+  
+  //  5
+  
+  const totalCharacters = (arr) => {
+      // Solution code here...
+    //  
+      let x = arr.join()  ;
+      
+      return x.length-1;
+    };
+    
+    
+    
